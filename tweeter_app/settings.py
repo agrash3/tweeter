@@ -38,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
     'bootstrap4',
     'bootstrap_datepicker_plus',
     'users',
     'tweets',
+    'api',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -127,10 +130,16 @@ LOGOUT_REDIRECT_URL = 'home' # new
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 EMAIL_HOST = 'smtp.gmail.com' # new
-EMAIL_HOST_USER =  'grashoffaustin@gmail' # new
+EMAIL_HOST_USER =  'grashoffaustin@gmail.com' # new
 EMAIL_HOST_PASSWORD = 'wraknjmxfouvktbs' # new
 EMAIL_PORT = 587 # new
 EMAIL_USE_TLS = True # new
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly', # new
+    ]
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
