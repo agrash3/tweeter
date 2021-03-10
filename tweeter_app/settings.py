@@ -125,6 +125,13 @@ BOOTSTRAP4 = { 'include_jquery': True } # new
 LOGIN_REDIRECT_URL = 'home' # new
 LOGOUT_REDIRECT_URL = 'home' # new
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+EMAIL_HOST = 'smtp.gmail.com' # new
+EMAIL_HOST_USER =  'grashoffaustin@gmail' # new
+EMAIL_HOST_PASSWORD = 'wraknjmxfouvktbs' # new
+EMAIL_PORT = 587 # new
+EMAIL_USE_TLS = True # new
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
