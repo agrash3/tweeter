@@ -137,8 +137,13 @@ EMAIL_USE_TLS = True # new
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly', # new
-    ]
+        # 'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [ # new
+        'rest_framework.authentication.TokenAuthentication', # new
+        'rest_framework.authentication.SessionAuthentication', # new
+],
 }
 
 # Static files (CSS, JavaScript, Images)
