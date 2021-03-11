@@ -6,13 +6,13 @@
 
 {% block extrahead %}
 {% endblock %}
-<title>Tweeter</title>
+<title>The Garden</title>
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{% url 'home' %}">Tweeter</a>
+    <a class="navbar-brand" href="{% url 'home' %}">The Garden</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@
       <ul class="navbar-nav mr-auto">
         {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'tweet_new' %}">New Tweet</a>
+            <a class="nav-link" href="{% url 'tweet_new' %}">Plant a Seed</a>
           </li>
         {% endif %}
       </ul>
